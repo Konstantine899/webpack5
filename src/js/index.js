@@ -5,6 +5,7 @@ import Calc from './calc';
 
 import '../scss/index.scss';
 import '../css/main.css';
+import '../index.html';
 
 const calc = new Calc();
 const log = new Log();
