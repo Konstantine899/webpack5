@@ -41,8 +41,8 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: path.resolve(__dirname, 'src/assets'),
-          to: path.resolve(__dirname, './app/assets'),
+          from: path.resolve(__dirname, './src/img'),
+          to: path.resolve(__dirname, './app/img'),
         },
       ],
     }),
@@ -52,6 +52,10 @@ module.exports = {
       {
         test: /\.html$/,
         loader: 'html-loader',
+        options: {
+          // Disables attributes processing
+          sources: false,
+        },
       },
       {
         test: /\.css$/i,
@@ -60,6 +64,17 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+      },
+      {
+        test: /\.(?:|gif|png|jpg|jpeg|svg)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: `./img/${filename('[ext]')}`,
+            },
+          },
+        ],
       },
     ],
   },
