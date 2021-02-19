@@ -1,7 +1,7 @@
-//src/calc.js
+// //src/calc.js
 
-export default class Calc {
-  add(...args) {
-    return args.reduce((a, b) => a + b, 0);
-  }
-}
+// export default class Calc {
+//   add(...args) {
+//     return args.reduce((a, b) => a + b, 0);
+//   }
+// }

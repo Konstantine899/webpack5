@@ -1,9 +1,9 @@
-//src/log.js
+// //src/log.js
 
-export default class Log {
-  log(msg) {
-    console.log('===========');
-    console.log(msg);
-    console.log('===========');
-  }
-}
+// export default class Log {
+//   log(msg) {
+//     console.log('===========');
+//     console.log(msg);
+//     console.log('===========');
+//   }
+// }
