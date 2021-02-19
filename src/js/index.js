@@ -18,8 +18,18 @@ import ReactDOM from 'react-dom';
 import '../scss/index.scss';
 import '../css/main.css';
 
-const App = () => (
-  <p>Проверка перезагрузки. Проверка работоспоссобности React проиложения</p>
-);
+const SearchPanel = () => {
+  return <input placeholder="search" />;
+};
+
+const App = () => {
+  return (
+    <div>
+      <p>Проверка перезагрузки</p>
+      <img src={require('../img/Images.jpeg').default} />
+      <SearchPanel />
+    </div>
+  );
+};
 
 ReactDOM.render(<App />, document.getElementById('root'));

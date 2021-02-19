@@ -57,6 +57,28 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
+      {
+        test: /\.(?:|gif|png|jpg|jpeg|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: `./img/${filename('[ext]')}`,
+            },
+          },
+        ],
+      },
+      {
+        test: /\.(?:|woff2)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: `./fonts/${filename('[ext]')}`,
+            },
+          },
+        ],
+      },
     ],
   },
 };
